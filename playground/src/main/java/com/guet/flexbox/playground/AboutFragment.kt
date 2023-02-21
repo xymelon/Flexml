@@ -72,7 +72,7 @@ class AboutFragment : Fragment() {
                             .asBitmap()
                             .load(R.drawable.ic_tomcat)
                             .submit()
-            val builder = AboutBuilder.with(context)
+            val builder = AboutBuilder.with(requireContext())
                     .setPhoto(photo.get())
                     .setCover(cover.get())
                     .setName("Luke")

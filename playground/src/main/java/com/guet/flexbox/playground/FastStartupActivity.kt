@@ -10,7 +10,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import com.didichuxing.doraemonkit.DoraemonKit
 import com.guet.flexbox.litho.LithoBuildTool
 import com.yzq.zxinglibrary.android.CaptureActivity
 import com.yzq.zxinglibrary.bean.ZxingConfig
@@ -21,7 +20,6 @@ class FastStartupActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        DoraemonKit.install(application)
         ActivityCompat.requestPermissions(
                 this,
                 definedPermissions,

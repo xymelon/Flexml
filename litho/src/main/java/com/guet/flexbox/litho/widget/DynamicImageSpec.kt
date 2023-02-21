@@ -22,9 +22,10 @@ import com.guet.flexbox.litho.transforms.FastBlur
 )
 object DynamicImageSpec {
 
-    @PropDefault
+    @get:PropDefault
     val scaleType = ScaleType.FIT_XY
-    @PropDefault
+
+    @get:PropDefault
     val imageAspectRatio = 1f
 
     @OnCreateInitialState

@@ -22,7 +22,8 @@
             android:configChanges="orientation|screenSize"
             android:icon="@drawable/ic_launcher"
             android:label="@string/app_name"
-            android:theme="@style/AppStartup">
+            android:theme="@style/AppStartup"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -34,7 +35,8 @@
             android:configChanges="orientation|screenSize"
             android:icon="@drawable/ic_qrcode"
             android:label="快速扫码"
-            android:theme="@style/AppStartup">
+            android:theme="@style/AppStartup"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

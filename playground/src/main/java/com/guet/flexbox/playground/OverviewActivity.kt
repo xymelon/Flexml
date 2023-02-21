@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.HandlerThread
 import android.os.Looper
+import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -25,7 +26,6 @@ import io.iftech.android.library.refresh.RefreshViewLayout
 import io.iftech.android.library.slide.SlideLayout
 import io.iftech.android.library.slide.configSlideChildTypeHeader
 import io.iftech.android.library.slide.configSlideChildTypeSlider
-import kotlinx.android.synthetic.main.activity_overview.*
 import okhttp3.*
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -156,7 +156,7 @@ class OverviewActivity : AppCompatActivity() {
             header = findViewById(R.id.header)
             header.configSlideChildTypeHeader()
             header.setOnScrollChangeListener { _: NestedScrollView?, _: Int, _: Int, _: Int, _: Int ->
-                host.performIncrementalMount()
+                findViewById<HostingView>(R.id.host).performIncrementalMount()
             }
             isLiveReload = findViewById(R.id.is_live_reload)
             isLiveReload.setOnClickListener {

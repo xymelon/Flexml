@@ -12,7 +12,6 @@ import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
-import com.didichuxing.doraemonkit.DoraemonKit
 import com.guet.flexbox.playground.R
 
 class TestActivity : AppCompatActivity() {
@@ -23,7 +22,6 @@ class TestActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        DoraemonKit.install(application)
         val path = Glide.get(this)
                 .registry.getLoadPath(
                 Int::class.java,

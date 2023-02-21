@@ -148,7 +148,7 @@ internal class PropsFiller<C : Component.Builder<*>>(
         inline fun <reified T : Number> value(name: String, crossinline method: (C, Short) -> C) {
             register(name, object : PropFiller<C, Float> {
                 override fun fill(c: C, display: Boolean, other: Map<String, Any>, value: Float) {
-                    method(c, value.toShort())
+                    method(c, value.toInt().toShort())
                 }
             })
         }

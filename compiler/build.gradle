@@ -7,9 +7,11 @@ buildscript {
                 }
             }
         })
+        maven { url "https://plugins.gradle.org/m2/" }
     }
     dependencies {
-        classpath "com.github.jengelman.gradle.plugins:shadow:5.2.0"
+        //https://plugins.gradle.org/plugin/com.github.johnrengelman.shadow
+        classpath "gradle.plugin.com.github.johnrengelman:shadow:7.1.2"
     }
 }
 
@@ -22,16 +24,13 @@ dependencies {
     implementation "commons-cli:commons-cli:1.4"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}"
     implementation 'org.dom4j:dom4j:2.1.1'
-    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.google.code.gson:gson:2.9.0'
 }
-
-sourceCompatibility = JavaVersion.VERSION_1_8
-targetCompatibility = JavaVersion.VERSION_1_8
 
 shadowJar {
     manifestContentCharset 'utf-8'
     metadataCharset 'utf-8'
-    archiveName = 'flexmlc.jar'
+    archiveBaseName.set('flexmlc')
     manifest {
         attributes "Manifest-Version": 1.0,
                 'Main-Class': 'com.guet.flexbox.compiler.Main'

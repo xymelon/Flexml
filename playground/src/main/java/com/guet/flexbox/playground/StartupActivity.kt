@@ -8,7 +8,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import com.didichuxing.doraemonkit.DoraemonKit
 import com.guet.flexbox.litho.LithoBuildTool
 import com.guet.flexbox.playground.model.AppLoader
 
@@ -24,7 +23,6 @@ class StartupActivity : AppCompatActivity() {
                     REQUEST_CODE
             )
         }
-        DoraemonKit.install(application)
         LithoBuildTool.init(this)
     }
 

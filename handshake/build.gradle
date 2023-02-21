@@ -1,8 +1,8 @@
 buildscript {
 
     ext {
-        springIOVersion = '2.2.4.RELEASE'
-        springPluginVersion = '1.0.9.RELEASE'
+        springIOVersion = '2.7.8'
+        springPluginVersion = '1.1.0'
     }
 
     repositories {
@@ -13,13 +13,15 @@ buildscript {
                 }
             }
         })
-        maven { url "http://repo.spring.io/release" }
-        maven { url "http://repo.spring.io/milestone" }
-        maven { url "http://repo.spring.io/snapshot" }
+        maven { url "https://repo.spring.io/release" }
+        maven { url "https://repo.spring.io/milestone" }
+        maven { url "https://repo.spring.io/snapshot" }
         maven { url "https://plugins.gradle.org/m2/" }
     }
     dependencies {
+        //https://plugins.gradle.org/plugin/io.spring.dependency-management
         classpath "io.spring.gradle:dependency-management-plugin:${springPluginVersion}"
+        //https://plugins.gradle.org/plugin/org.springframework.boot
         classpath "org.springframework.boot:spring-boot-gradle-plugin:${springIOVersion}"
     }
 }
@@ -38,7 +40,7 @@ compileTestKotlin {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation('com.google.code.gson:gson:2.8.6')
+    implementation('com.google.code.gson:gson:2.9.0')
     implementation project(':compiler')
     implementation('com.google.zxing:core:3.4.0')
     implementation("org.springframework.boot:spring-boot-starter:${springIOVersion}")

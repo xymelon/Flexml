@@ -16,7 +16,7 @@ object ThreadCheckerSpec {
     @OnCreateLayout
     fun onCreateLayout(c: ComponentContext, @Prop component: Component): Component {
         if (Looper.myLooper() == mainThread) {
-            Log.e(ThreadChecker::class.java.simpleName,
+            Log.e(ThreadCheckerSpec::class.java.simpleName,
                     "Flexbox layout in main thread"
             )
         }
